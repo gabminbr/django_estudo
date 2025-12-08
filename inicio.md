@@ -3,3 +3,6 @@
 - lembre-se também de usar o cntrll + shift + p e selecionar o interpretador certo (o que tiver o venv)
 
 # Django
+## instalando django
+- certifique-se que está dentro do seu ambiente virtual
+- rode pip install django
