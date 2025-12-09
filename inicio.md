@@ -21,3 +21,13 @@ django-admin startproject nome-do-projeto .
 python manage.py runserver
 ```
 - lembre-se sempre: use o ambiente virtual.
+
+## urls
+- o arquivo urls é como uma recepção, a função dele é: ler o endereço que o usuário digitou e decidir qual função Python deve ser executada
+- a função path recebe 3 argumentos principais
+```python
+path('artigos/<int:id>/', views.detalhe_artigo, name='detalhe')
+```
+- route (primeiro argumento): é o padrão da URL (o endereço), exemplo 'sobre/'
+- a view: é a função que é chamada se a URL bater com o padrão acima, o django vai chamar automaticamente essa função e passar a request.
+- o name: é o apelido interno da URL, ajuda tipo em vez de escrever /artigos/5/ hardcoded (fixo) no seu código HTML, você usa uma tag do Django tipo {% url 'detalhe' 5 %}
